@@ -7,33 +7,6 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { protectRoute } from "../../../HOC/protectedRoute";
 
-// export async function getServerSideProps(context) {
-//     try{
-//         const {id} = context.params;
-
-//         const response = await axios({
-//             method: 'GET',
-//             url: `${process.env.NEXT_PUBLIC_API_URL}/user/portofolio/${id}`,
-//         })
-
-//         return{
-//             props:{
-//                 data: response.data.data,
-//                 err: false,
-//                 errMessage: "",
-//             }
-//         }
-//     }catch(err){
-//         return{
-//             props:{
-//                 data: [],
-//                 err: true,
-//                 errMessage: "Fetching data failed",
-//             }
-//         }
-//     }
-// }
-
 export async function getStaticProps(context){
     try{
         const { id } = context.params;
@@ -94,10 +67,12 @@ const Portofolio = (props) => {
                             ) : data.length === 0 ? (
                                 <div className="align-self-center font-weight-bold">No portofolio</div>
                             ) : data.map((e, i) => (
-                                <div key={i} className="d-flex flex-column gap-3 justify-content-center align-items-center" style={{width: "210px"}}>
-                                    <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${e.image}`} className={`rounded-2`} height={100} width={200} alt="user porto" />
-                                    <p className="text-center text-break">{e.app_title}</p>
-                                </div>
+                                <Link key={i} href={e.link} className={`${styles.link}`}>
+                                    <div className="d-flex flex-column gap-3 justify-content-center align-items-center" style={{width: "210px"}}>
+                                        <Image src={`${e.image.split('|&&|')[0]}`} className={`rounded-2 ${styles.border}`} height={100} width={200} alt="user porto" />
+                                        <p className="text-center text-break">{e.app_title}</p>
+                                    </div>
+                                </Link>
                             ))
                         }
                     </div>

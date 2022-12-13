@@ -153,8 +153,6 @@ const Profile = () => {
             jobdesk: form.jobdesk,
         }
 
-        console.log(data)
-
         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/experience`, data)
         .then((res) => {
             alert(res.data.message);
@@ -179,6 +177,7 @@ const Profile = () => {
         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/portofolio`, data)
         .then((res) => {
             alert(res.data.message);
+            if(res.data.status !== 'success') alert(res.data.error.message)
             router.reload();
         })
         .catch((err) => {
@@ -188,11 +187,14 @@ const Profile = () => {
     }
 
     const changeImg = () => {
-        let data = new FormData();
-        data.append('photo', form.photo);
-        data.append('email', form.email);
+        const data = {
+            photo: form.photo,
+            email: form.email,
+        }
 
-        axios.put(`${process.env.NEXT_PUBLIC_API_URL}/user/photo/${user.data.id}`, data)
+        axios.put(`${process.env.NEXT_PUBLIC_API_URL}/user/photo/${user.data.id}`, data, {
+            headers: { "Content-Type": "multipart/form-data" },
+        })
         .then((res) => {
             localStorage.setItem('userData', JSON.stringify(res.data.data[0]));
             alert(res.data.message);

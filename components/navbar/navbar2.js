@@ -40,7 +40,7 @@ export default function Navbar1(props) {
                             photo.isLoading ? (
                                 <div className={`rounded-circle mx-2`} width={40} height={40}></div>
                             ) : (
-                                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${photo.data}`} className={`rounded-circle mx-2`} width={40} height={40} alt="user pic" />
+                                <Image src={`${photo.data.split('|&&|')[0]}`} className={`rounded-circle mx-2`} width={40} height={40} alt="user pic" />
                             )
                         }
                     </Link>

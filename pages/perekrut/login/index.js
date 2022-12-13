@@ -27,6 +27,7 @@ export default function Login() {
         if(res.data.data.data.user_type === 1){
           localStorage.setItem('userData', JSON.stringify(res.data.data.data));
           localStorage.setItem('token', res.data.data.token);
+          alert('Login sukses');
           router.push("/");
         }else{
           alert('Pengguna tidak terdaftar sebagai perekrut');

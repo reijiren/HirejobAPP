@@ -57,12 +57,12 @@ const Pengalaman = (props) => {
                             ) : data.length === 0 ? (
                                 <div className="align-self-start font-weight-bold">No job experience</div>
                             ) : data.map((e, i) => (
-                                <div key={i} className="d-flex flex-row gap-3">
-                                    <Image src={"/tokopedia.jpeg"} className={`rounded-2`} height={100} width={100} alt="user experience" />
+                                <div key={i} className="d-flex flex-row gap-3 align-items-center">
+                                    <p style={{fontSize: '24px'}}>({i+1})</p>
                                     <div className="d-flex flex-column gap-1">
-                                        <div className={`${style2.namaPekerja}`}>{e.job_title}</div>
-                                        <div className={`${style2.jobTitle}`}>{e.company}</div>
-                                        <div className={`${style2.jobType}`}>{e.date_in.slice(0, 10)} until {e.date_out.slice(0, 10)} {/*({e.date_out.slice(5, 7) - e.date_in.slice(5, 7)} months)*/}</div>
+                                        <div className={`${style2.namaPekerja}`}>{e.title}</div>
+                                        <div className={`${style2.jobTitle}`}>at {e.company}</div>
+                                        <div className={`${style2.jobType}`}>from {e.date_in.slice(0, 10)} until {e.date_out.slice(0, 10)}</div>
                                         <div className="my-2 text-break">{e.jobdesk || "no description"}</div>
                                     </div>
                                 </div>

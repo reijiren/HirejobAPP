@@ -28,7 +28,7 @@ export default function Profile2() {
         <div>Loading...</div>
     ) : user.data.map((e, i) => (
         <div key={i} className={`${styles.card} bg-white rounded-2 mt-4 mb-2 mx-2 p-4 gap-2 shadow-sm d-flex flex-column`}>
-            <Image className="rounded-circle align-self-center mb-2" src={`${process.env.NEXT_PUBLIC_API_URL}/${e.photo}`} width={200} height={200} alt="user pic" />
+            <Image className="rounded-circle align-self-center mb-2" src={`${e.photo.split('|&&|')[0]}`} width={200} height={200} alt="user pic" />
             <div className={`${style2.namaPekerja}`}>{e.name}</div>
             <div className={`${style2.jobTitle}`}>{e.job_title || "(no title)"}</div>
             <div className='d-flex flex-row gap-3 align-items-center'><FontAwesomeIcon icon={faMapMarkerAlt} style={{color: '#9EA0A5'}} /><div className={`${style2.jobType}`}>{e.city ? e.city : "none"}</div></div>

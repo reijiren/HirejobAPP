@@ -3,7 +3,10 @@
 
   <h3 align="center">PeWorld Hirejob</h3>
   <p align="center">
-    <image align="center" width="200" src='./assets/' />
+    <image align="center" width="200" src='./public/hirejob_logo.png' />
+  </p>
+  <p align="center">
+    <a href="https://ankasa-nightlabs.vercel.app">View Demo</a>
   </p>
 </p>
 
@@ -13,8 +16,9 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Project Structure](#project-structure)
   * [Screenshots](#screenshots)
-  * [Built With](#built-with)
+  * [Package Modules](#package-modules)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,6 +33,21 @@
 
 Hirejob is an application for job seekers and post their professional background such as job experience and portfolio. There are 2 types of users: Workers and Recruiters. Workers are able to post their job Experience and Portfolio on their profile, and Recruiters may contact any Workers for further hiring information.
 
+
+### Project Structure
+```
+|── HirejobAPP
+   |── components          # Application components
+   |── HOC                 # Higher Order Components
+   |── pages               # Pages source code
+   |── public              # Public assets
+   |── screenshot          # Screenshots of the application
+   |── styles              # CSS source code
+   |── .env                # Environment variables
+   |── .gitignore          # Files that should be ignored
+   |── next.config.js      # Next configuration file
+   |── README.md           # Readme
+```
 
 ### Screenshots
 <details>
@@ -108,11 +127,16 @@ Hirejob is an application for job seekers and post their professional background
 <img src="/screenshot/profil_perekrut.png" alt="recruiter profile" />
 </details>
 
-### Built With
+### Package Modules
+
+Below are lists of modules used in this application:
 
 * [Next JS](https://nextjs.org/)
+* [React JS](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Axios](https://axios-http.com/)
+* [Reactstrap](https://reactstrap.github.io)
+* [FontAwesome](https://fontawesome.com)
 
 
 <!-- GETTING STARTED -->
@@ -154,7 +178,5 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- RELATED PROJECT -->
 ## Related Project
-Hirejob RESTful API used in this application
-* [Hirejob API](https://github.com/reijiren/HirejobAPI)
-
-
+[Hirejob RESTful API](https://hirejob-rhefrz.up.railway.app) is used in this application.
+* [View Documentation](https://github.com/reijiren/HirejobAPI)

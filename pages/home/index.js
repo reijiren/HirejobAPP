@@ -101,7 +101,7 @@ const Home = () => {
                     <div>Loading...</div>
                 ) : user.data.length !== 0 ? user.data.map((e, i) => (
                 <div key={i} className={`${styles.cardPekerja} d-flex flex-row align-items-center rounded-2 border bg-white mx-5 my-1`}>
-                    <Image className='mx-3 rounded-circle' src={`${process.env.NEXT_PUBLIC_API_URL}/${e.photo}`} priority={i} width={150} height={150} alt="user pic" />
+                    <Image className='mx-3 rounded-circle' src={`${e.photo.split('|&&|')[0]}`} priority={i} width={150} height={150} alt="user pic" />
                     <div className={`${styles.infoPekerja} d-flex flex-column align-items-start mx-2 gap-2`}>
                         <div className={`${styles.namaPekerja}`}>{e.name}</div>
                         <div className={`${styles.jobType}`}>{e.job_title || "Freelance"}</div>

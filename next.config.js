@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "hirejob-rhefrz.up.railway.app", "res.cloudinary.com"],
   }
 }
 
