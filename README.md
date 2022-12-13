@@ -6,7 +6,7 @@
     <image align="center" width="200" src='./public/hirejob_logo.png' />
   </p>
   <p align="center">
-    <a href="https://ankasa-nightlabs.vercel.app">View Demo</a>
+    <a href="https://hirejob-rhefrz.vercel.app">View Demo</a>
   </p>
 </p>
 
