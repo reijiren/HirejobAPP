@@ -179,4 +179,4 @@ Contributions are what make the open source community such an amazing place to b
 <!-- RELATED PROJECT -->
 ## Related Project
 [Hirejob RESTful API](https://hirejob-rhefrz.up.railway.app) is used in this application.
-* [View Documentation](https://github.com/reijiren/HirejobAPI)
+* [View API Documentation](https://github.com/reijiren/HirejobAPI)
