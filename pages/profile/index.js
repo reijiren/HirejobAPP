@@ -259,35 +259,35 @@ const Profile = () => {
                                 <form onSubmit={(e) => onSubmit(e)} id="form-data">
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Nama lengkap</label>
-                                        <input type={'text'} placeholder={'Masukan nama lengkap'} className={`rounded-2 p-2`} defaultValue={user.data.name} id="inputName" onChange={(e) => setForm({...form, name: e.target.value})} disabled required />
+                                        <input type={'text'} placeholder={'Masukan nama lengkap'} maxLength={50} className={`rounded-2 p-2`} defaultValue={user.data.name} id="inputName" onChange={(e) => setForm({...form, name: e.target.value})} disabled required />
                                     </div>
                                     {
                                         user.data.user_type === 1 && (
                                             <>
                                             <div className="form d-flex flex-column gap-2 my-2">
                                                 <label className="mx-2 text-gray">Nama Perusahaan</label>
-                                                <input type={'text'} placeholder={'Masukan nama perusahaan'} className={`rounded-2 p-2`} defaultValue={user.data.company_name} id="inputCName" onChange={(e) => setForm({...form, company_name: e.target.value})} disabled />
+                                                <input type={'text'} placeholder={'Masukan nama perusahaan'} maxLength={50} className={`rounded-2 p-2`} defaultValue={user.data.company_name} id="inputCName" onChange={(e) => setForm({...form, company_name: e.target.value})} disabled />
                                             </div>
                                             <div className="form d-flex flex-column gap-2 my-2">
                                                 <label className="mx-2 text-gray">Bidang Perusahaan</label>
-                                                <input type={'text'} placeholder={'Masukan bidang perusahaan'} className={`rounded-2 p-2`} defaultValue={user.data.company_field} id="inputCField" onChange={(e) => setForm({...form, company_field: e.target.value})} disabled />
+                                                <input type={'text'} placeholder={'Masukan bidang perusahaan'} maxLength={20} className={`rounded-2 p-2`} defaultValue={user.data.company_field} id="inputCField" onChange={(e) => setForm({...form, company_field: e.target.value})} disabled />
                                             </div>
                                             <div className="form d-flex flex-column gap-2 my-2">
                                                 <label className="mx-2 text-gray">Jabatan</label>
-                                                <input type={'text'} placeholder={'Masukan jabatan'} className={`rounded-2 p-2`} defaultValue={user.data.position} id="inputPos" onChange={(e) => setForm({...form, position: e.target.value})} disabled />
+                                                <input type={'text'} placeholder={'Masukan jabatan'} maxLength={40} className={`rounded-2 p-2`} defaultValue={user.data.position} id="inputPos" onChange={(e) => setForm({...form, position: e.target.value})} disabled />
                                             </div>
                                             </>
                                         )
                                     }
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Pekerjaan</label>
-                                        <input type={'text'} placeholder={'Masukan pekerjaan'} className={`rounded-2 p-2`} defaultValue={user.data.job_title} id="inputJob" onChange={(e) => setForm({...form, job_title: e.target.value})} disabled />
+                                        <input type={'text'} placeholder={'Masukan pekerjaan'} maxLength={40} className={`rounded-2 p-2`} defaultValue={user.data.job_title} id="inputJob" onChange={(e) => setForm({...form, job_title: e.target.value})} disabled />
                                     </div>
                                     {
                                         user.data.user_type === 0 && (
                                             <div className="form d-flex flex-column gap-2 my-2">
                                                 <label className="mx-2 text-gray">Jenis pekerjaan</label>
-                                                <input type={'text'} placeholder={'Masukan jenis pekerjaan'} className={`rounded-2 p-2`} defaultValue={user.data.job_type} id="inputJobType" onChange={(e) => setForm({...form, job_type: e.target.value})} disabled />
+                                                <input type={'text'} placeholder={'Masukan jenis pekerjaan'} maxLength={40} className={`rounded-2 p-2`} defaultValue={user.data.job_type} id="inputJobType" onChange={(e) => setForm({...form, job_type: e.target.value})} disabled />
                                             </div>
                                         )
                                     }
@@ -297,19 +297,19 @@ const Profile = () => {
                                     </div>
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Instagram</label>
-                                        <input type={'text'} placeholder={'Masukan akun instagram'} className={`rounded-2 p-2`} defaultValue={user.data.instagram} id="inputIg" onChange={(e) => setForm({...form, instagram: e.target.value})} disabled />
+                                        <input type={'text'} placeholder={'Masukan akun instagram'} maxLength={30} className={`rounded-2 p-2`} defaultValue={user.data.instagram} id="inputIg" onChange={(e) => setForm({...form, instagram: e.target.value})} disabled />
                                     </div>
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Github</label>
-                                        <input type={'text'} placeholder={'Masukan akun github'} className={`rounded-2 p-2`} defaultValue={user.data.github} id="inputGithub" onChange={(e) => setForm({...form, github: e.target.value})} disabled />
+                                        <input type={'text'} placeholder={'Masukan akun github'} maxLength={30} className={`rounded-2 p-2`} defaultValue={user.data.github} id="inputGithub" onChange={(e) => setForm({...form, github: e.target.value})} disabled />
                                     </div>
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Gitlab</label>
-                                        <input type={'text'} placeholder={'Masukan akun gitlab'} className={`rounded-2 p-2`} defaultValue={user.data.gitlab} id="inputGitlab" onChange={(e) => setForm({...form, gitlab: e.target.value})} disabled />
+                                        <input type={'text'} placeholder={'Masukan akun gitlab'} maxLength={30} className={`rounded-2 p-2`} defaultValue={user.data.gitlab} id="inputGitlab" onChange={(e) => setForm({...form, gitlab: e.target.value})} disabled />
                                     </div>
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Linkedin</label>
-                                        <input type={'text'} placeholder={'Masukan akun linkedin'} className={`rounded-2 p-2`} defaultValue={user.data.linkedin} id="inputLinkedin" onChange={(e) => setForm({...form, linkedin: e.target.value})} disabled />
+                                        <input type={'text'} placeholder={'Masukan akun linkedin'} maxLength={30} className={`rounded-2 p-2`} defaultValue={user.data.linkedin} id="inputLinkedin" onChange={(e) => setForm({...form, linkedin: e.target.value})} disabled />
                                     </div>
                                     <div className="form d-flex flex-column gap-2 my-2">
                                         <label className="mx-2 text-gray">Deskripsi singkat</label>
